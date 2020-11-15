@@ -39,8 +39,8 @@
 
          <div>
          <div style="text-align:center"> 
-    <form class="subform"  method="post" action="{{ route('addCategory.store') }} " enctype="multipart/form-data">
-    {{ csrf_field() }} <!-- very important if you didn't insert CSRF, it not allow submit the data-->
+    <form class="subform"  method="post" action="{{ route('addCategory') }} " enctype="multipart/form-data">
+    @csrf <!-- very important if you didn't insert CSRF, it not allow submit the data-->
     <p>
         <label for="ID" class="label">Category ID</label>
         <input type="text" name="ID" id="ID">
